@@ -132,9 +132,9 @@ document.write("<br><br>", colorNames);
 var index = +prompt("Enter Index number where you want to add the colors");
 var addColors = prompt("Enter Color names you want to add")
 
-colorNames.splice(index , 0 , addColors)
+colorNames.splice(index , 0 , addColors);
 
-document.write("<br><br>",colorNames)
+document.write("<br><br>",colorNames);
 
 
 
