@@ -78,26 +78,25 @@ document.write(
   " is ",
   studentsScore[2],
   ". Percentage : ",
-  percentage3,"<br><br>"
+  percentage3,
+  "<br><br>"
 );
 
 // Q9. Initialize an array with color names. Display the array elements in your browser.
 
-var colorNames = [" Blue ", " Black ", " Green ", " Red " , " Yellow "];
-document.write(colorNames)
-
+var colorNames = [" Blue ", " Black ", " Green ", " Red ", " Yellow "];
+document.write(colorNames);
 
 // a. Ask the user what color he/she wants to add to the beginning & add that color to the beginning of the array.
 // Display the updated array in your browser.
 
 var addColorInfirst = prompt("Which color you wants to add in the first?");
 
-colorNames.unshift( addColorInfirst );
+colorNames.unshift(addColorInfirst);
 
-document.write("<br><br>", colorNames)
+document.write("<br><br>", colorNames);
 
-
-// b. Ask the user what color he/she wants to add to the end & add that color to the end of the array. 
+// b. Ask the user what color he/she wants to add to the end & add that color to the end of the array.
 // Display the updated array in your browser.
 
 var addColorInEnd = prompt("Which color you wants to add in the last?");
@@ -106,36 +105,145 @@ colorNames.push(addColorInEnd);
 
 document.write("<br><br>", colorNames);
 
-
 // c. Add two more color to the beginning of the array.
 // Display the updated array in your browser.
 
-colorNames.unshift("White "," Maroon ");
+colorNames.unshift("White ", " Maroon ");
 document.write("<br><br>", colorNames);
 
-
-// d. Delete the first color in the array. 
+// d. Delete the first color in the array.
 // Display the updated array in your browser
 
 colorNames.shift();
 document.write("<br><br>", colorNames);
 
-// e. Delete the last color in the array. 
+// e. Delete the last color in the array.
 // Display the updated array in your browser.
 
 colorNames.pop();
 document.write("<br><br>", colorNames);
 
-// f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index. . 
+// f. Ask the user at which index he/she wants to add a color & color name. Then add the color to desired position/index. .
 // Display the updated array in your browser.
 
 var index = +prompt("Enter Index number where you want to add the colors");
-var addColors = prompt("Enter Color names you want to add")
+var addColors = prompt("Enter Color names you want to add");
 
-colorNames.splice(index , 0 , addColors);
+colorNames.splice(index, 0, addColors);
 
-document.write("<br><br>",colorNames);
+document.write("<br><br>", colorNames);
 
+// g. Ask the user at which index he/she wants to delete color(s) & how many colors he/she wants to delete. Then remove the same number of color(s) from user-defined position/index. . Display the updated array in your browser.
 
+var indexDel = +prompt("Enter the index number where to start the deletion");
 
+var colorDel = +prompt("Enter how many colors you want to delete");
 
+colorNames.splice(indexDel, colorDel);
+
+document.write("<br><br>", colorNames, "<br><br>");
+
+// Q10. Write a program to store student scores in an array & sort the array in ascending order using Array’s sort method.
+
+var arr = [23, 24, 17, 90, 100];
+
+alert(arr.sort());
+
+// Q11. Write a program to initialize an array with city names. Copy 3 array elements from cities array to selectedCities array.
+
+var citiesArr = [
+  "Karachi ",
+  " Lahore ",
+  " Islamabad ",
+  " Peshawar ",
+  " Multan",
+];
+
+document.write("<b>Cities list</b><br>", citiesArr, "<br><br>");
+document.write("<b>Selected Cities</b><br>", citiesArr.slice(1, 3), "<br><br>");
+
+// Q12. Write a program to create a single string from the below mentioned array: var arr = [“This ”, “ is ”, “ my ”, “ cat”]; (Use array’s join method)
+
+var arr1 = ["This", "is", "my", "cat."];
+
+document.write("<b>Array</b><br>", arr1, "<br><br>");
+document.write("<b>String</b><br>", arr1.join(" "), "<br><br>");
+
+// Q13. Create a new array. Store values one by one in such a way that you can access the values in the order in which they were stored. (FIFO-First In First Out)
+
+var devices = ["Keyboard", "mouse", "Printer", "monitor"];
+
+document.write("<b>Devices</b><br>", devices.join(", "), "<br><br>");
+document.write("<b>Out</b><br>", devices.shift(), "<br>");
+document.write("<b>Out</b><br>", devices.shift(), "<br>");
+document.write("<b>Out</b><br>", devices.shift(), "<br>");
+document.write("<b>Out</b><br>", devices.shift(), "<br><br>");
+
+// 14. Create a new array. Store values one by one in such a way that you can access the values in reverse order. (Last InFirst Out)
+
+var devices2 = ["Keyboard", "mouse", "Printer", "monitor"];
+
+document.write("<b>Devices</b><br>", devices2.join(", "), "<br><br>");
+document.write("<b>Out</b><br>", devices2.pop(), "<br>");
+document.write("<b>Out</b><br>", devices2.pop(), "<br>");
+document.write("<b>Out</b><br>", devices2.pop(), "<br>");
+document.write("<b>Out</b><br>", devices2.pop(), "<br><br>");
+
+// Q15. Write a program to store phone manufacturers (Apple,   Samsung, Motorola, Nokia, Sony & Haier) in an array.   Display the following dropdown/select menu in your   browser using document.write() method:
+
+var mobile = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+document.write(
+  "<Select><option>",
+  mobile[0],
+  "</option><option>",
+  mobile[1],
+  "</option><option>",
+  mobile[2],
+  "</option><option>",
+  mobile[3],
+  "</option><option>",
+  mobile[4],
+  "</option><option>",
+  mobile[5],
+  "</option></Select><br><br>"
+);
+
+// HOME ASSIGMENT
+// Chapter 15:- (Array I)
+
+// Q1. Declare an empty array.
+
+var empArr = [];
+
+// Q2. Code an array with 1 string element
+
+var strArr = ["Areeb"];
+
+// Q3. var alphabet = ["h","i","j","k"]. Now print the letter “j” in alert using array index
+
+var alphabet = ["h", "i", "j", "k"];
+
+alert(alphabet[2]);
+
+// Q4. var alphabet=["h","i","j","k", “l”,”m”, “n”, “o”]. Find the total length of array.
+
+var alphabet = ["h", "i", "j", "k", "l", "m", "n", "o"];
+
+console.log(alphabet.length);
+
+// Q5. Declare an array with one element and Add a second element
+
+var one = ["Areeb"];
+one.splice(33, 0, " Ayesha");
+
+alert(one);
+
+// Chapter 16:- (Array II)
+
+// Q1. Code an array with 1 string element. Add an additional element to the array using push. Create an alert whose message is the last element.
+
+var array = ["Areeb"];
+array.push("Ayesha");
+
+console.log(array.push());
